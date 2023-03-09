@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test2.css">
+    <script src="test2.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Samsung</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="test.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="test1.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="test2.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="test3.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>About Us</h2>
+              <p>We are a leading smartphone manufacturer, dedicated to creating innovative and high-quality devices that enhance people's lives. Our mission is to provide our customers with the best possible user experience and the latest technology, all at an affordable price.</p>
+              <p>Founded in 1938, we have been at the forefront of the electronics industry for over 80 years. Our commitment to excellence has earned us numerous awards and accolades, and we continue to strive for perfection in everything we do.</p>
+              <a href="#"  id="scroll-down-btn" sclass="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-md-6">
+              <img src="your all in one gadgets.png" alt="About Us">
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        // Get the "Learn More" button
+const button = document.querySelector('.btn-primary');
+
+// Add event listener to the button
+button.addEventListener('click', (event) => {
+// Prevent default link behavior
+event.preventDefault();
+// Scroll to the top of the page
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Get the button element
+const scrollDownBtn = document.querySelector('#scroll-down-btn');
+
+// Add event listener to the button
+scrollDownBtn.addEventListener('click', () => {
+// Get the height of the header section
+const headerHeight = document.querySelector('header').offsetHeight;
+// Get the height of the navigation bar (if present)
+const navBarHeight = document.querySelector('nav') ? document.querySelector('nav').offsetHeight : 0;
+// Calculate the final position to scroll to
+const finalPosition = headerHeight + navBarHeight;
+// Scroll the page to the final position
+window.scrollTo({ top: finalPosition, behavior: 'smooth' });
+});
+      </script>
+
+
+</body>
+</html>
